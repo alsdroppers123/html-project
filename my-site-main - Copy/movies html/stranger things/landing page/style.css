@@ -1,0 +1,373 @@
+
+/*-------------------------------------*\
+  #VARIABLES
+\*-------------------------------------*/
+
+/**
+ * import variables.css file 
+ */
+
+ @import url(/assets/css/variable.css);
+
+
+
+
+
+ /*-------------------------------------*\
+   #RESET
+ \*-------------------------------------*/
+ 
+ /**
+  * import reset.css file 
+  */
+ 
+ @import url(/assets/css/reset.css);
+ 
+ 
+ 
+ 
+ 
+ /*-------------------------------------*\
+   #REPEAT
+ \*-------------------------------------*/
+ 
+ /**
+  * reused style
+  */
+ 
+ header, nav { background: var(--rich-black-fogra-29); }
+ 
+ .navbar,
+ .banner,
+ .movies,
+ .category,
+ .live {
+   padding: 0 var(--px);
+ }
+ 
+ .section-heading {
+   font-size: var(--section-heading);
+   font-weight: var(--fw-5);
+   margin-bottom: 60px;
+ }
+ 
+ 
+ 
+ 
+ 
+ /*-------------------------------------*\
+   #MAIN
+ \*-------------------------------------*/
+ 
+ /**
+  * main container style 
+  */
+ 
+ .container {
+   max-width: 1440px;
+   margin: auto;
+ }
+ 
+ 
+ 
+ 
+ 
+ /*-------------------------------------*\
+   #NAVBAR
+ \*-------------------------------------*/
+ 
+ /**
+  * navbar style 
+  */
+ 
+ .navbar {
+   height: 100px;
+   display:         flex;
+   justify-content: space-between;
+   align-items:     center;
+ }
+ 
+ /**
+  * small screen menu button style 
+  */
+ 
+ .navbar-menu-btn { display: none; }
+ 
+ /**
+  * navbar navigation style 
+  */
+ 
+ nav { margin-right: 200px; }
+ 
+ .navbar-nav { display: flex; }
+ 
+ .navbar-nav li:not(:last-child) { margin-right: 60px; }
+ 
+ .navbar-link {
+   font-size: var(--fs-sm);
+   font-weight: var(--fw-5);
+ }
+ 
+ .navbar-link:hover { color: var(--light-azure); }
+ 
+ /**
+  * live indicator style 
+  */
+ 
+ .indicator { position: relative; }
+ 
+ .indicator::after {
+   content: '';
+   background: var(--live-indicator);
+   position: absolute;
+   top:   calc(50% - 1px);
+   right: -15px;
+   width:  4px;
+   height: 4px;
+   box-shadow: 0 0 0 2px var(--live-indicator-shadow);
+   border-radius: 5px;
+ }
+ 
+ /**
+  * navbar form & button style 
+  */
+ 
+ .navbar-actions {
+   display:     flex;
+   align-items: center;
+ }
+ 
+ .navbar-form {
+   position: relative;
+   margin-right: 50px;
+ }
+ 
+ .navbar-form-search {
+   background: var(--oxford-blue);
+   width: 100%;
+   padding: 12px 20px;
+   border-radius: 15px;
+   color: var(--off-white);
+   font-size: var(--fs-sm);
+   font-weight: var(--fw-5);
+ }
+ 
+ .navbar-form-btn {
+   background: var(--oxford-blue);
+   position: absolute;
+   top:   calc(50% - 10px);
+   right: 10px;
+ }
+ 
+ .navbar-form-btn ion-icon,
+ .navbar-search-btn ion-icon {
+   font-size: 20px;
+   color: var(--light-azure);
+   --ionicon-stroke-width: 50px;
+ }
+ 
+ .navbar-form-btn:hover ion-icon,
+ .navbar-form-search::placeholder { color: var(--off-white); }
+ 
+ /**
+  * navbar-form close button & navbar search button
+  * for small device 
+  */
+ 
+ .navbar-form-close,
+ .navbar-search-btn { display: none; }
+ 
+ .navbar-signin {
+   display:     flex;
+   align-items: center;
+   font-size: var(--fs-sm);
+ }
+ 
+ .navbar-signin ion-icon {
+   font-size: 22px;
+   color: var(--light-azure);
+   margin-left: 5px;
+   --ionicon-stroke-width: 30px;
+ }
+ 
+ .navbar-signin:hover span { color: var(--light-azure); }
+
+
+ /*-------------------------------------*\
+  #MOVIE PLAYER
+\*-------------------------------------*/
+
+section
+{
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+section .player{
+
+    border: 2px solid #000;
+    height: 800px;
+    display: flex;
+    background: #000;
+    border-radius: 20px;
+    
+}
+
+section .player iframe{
+
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    width:100%; 
+    height:99%;
+    border-radius: 20px;
+    
+}
+
+
+.seasons{
+
+  /* border: 2px solid #000; */
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  font-family: var(--ff-inter);
+
+}
+
+
+
+.seasons button{
+
+  border: 2px solid #000;
+  height: 30px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: var(--light-azure);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+}
+
+.seasons button:focus{
+
+background-color: var(--oxford-blue);
+
+}
+
+
+.episodes{
+
+  border: 2px solid #000;
+  height: 250px;
+  border-radius: 20px;
+  background-color: var(--rich-black-fogra-30);
+  display: flex;
+  transition: all .3s ease-in-out;
+  margin-top: -20px;
+}
+
+.episodes .col1,.col2{
+
+  display: grid;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  grid-template: 40px /auto auto auto auto auto auto auto auto ;
+  grid-gap: 20px ;
+  /* border: 2px solid #fff; */
+  height: 90%;
+  width: 100%;
+  margin-left: 2%;
+}
+
+.episodes button{
+  border: 2px solid #000;
+  height: 40px;
+  width: 80%;
+  border-radius: 20px;
+  background-color: var(--light-azure);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.episodes button:hover{
+
+  background-color: var(--oxford-blue);
+}
+ 
+
+ /*-------------------------------------*\
+  #FOOTER SECTION
+\*-------------------------------------*/
+
+footer {
+    background: var(--rich-black-fogra-30);
+    padding: 80px var(--px) 40px;
+  }
+  
+  .footer-content {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     flex-start;
+    border-bottom: 1px solid var(--oxford-blue-50);
+    padding-bottom: 80px;
+  }
+  
+  .footer-brand {
+    max-width: 250px;
+    margin-right: 130px;
+  }
+  
+  .footer-logo {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  
+  .slogan {
+    font-size: var(--fs-sm);
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .social-link a { display: inline-block; }
+  
+  .social-link ion-icon {
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  
+  .footer-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    align-items: flex-end;
+  }
+  
+  .link-heading { margin-bottom: 20px; }
+  
+  .link-item { font-size: var(--fs-sm); }
+  
+  ul .link-item:not(:last-child) { margin-bottom: 10px; }
+  
+  .link-item:hover a { color: var(--light-azure); }
+  
+  .footer-copyright {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    padding-top: 40px;
+  }
+  
+  .footer-copyright p,
+  .wrapper a { font-size: var(--fs-sm); }
+  
+  .wrapper a:hover { color: var(--light-azure); }
+  
+  .wrapper { display: flex; }
+  
+  .wrapper a:not(:last-child) { margin-right: 30px; }
